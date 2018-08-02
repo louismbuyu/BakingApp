@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TOP_MARGIN">8dp</dimen>
+    <dimen name="LEFT_MARGIN">16dp</dimen>
+    <dimen name="widget_margin">8dp</dimen>
+</resources>

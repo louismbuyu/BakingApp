@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Step.StepFragment"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/prev_next_section"
+            android:layout_marginTop="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp">
+
+                <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="460dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="0dp"/>
+
+                <TextView
+                    android:id="@+id/detail_step_title_id"
+                    android:text="This is some testing text"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/video_view"
+                    android:layout_marginLeft="@dimen/LEFT_MARGIN"
+                    android:layout_marginRight="@dimen/LEFT_MARGIN"
+                    android:layout_marginTop="@dimen/TOP_MARGIN"/>
+
+                <TextView
+                    android:id="@+id/detail_step_description_id"
+                    android:text="This is some testing text"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_step_title_id"
+                    android:layout_marginLeft="@dimen/LEFT_MARGIN"
+                    android:layout_marginRight="@dimen/LEFT_MARGIN"
+                    android:layout_marginTop="@dimen/TOP_MARGIN"
+                    android:layout_marginBottom="@dimen/TOP_MARGIN"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/prev_next_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/prevBtn"
+                android:text="Previous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:text="Next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
